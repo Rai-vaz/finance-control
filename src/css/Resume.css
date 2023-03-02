@@ -1,0 +1,10 @@
+.container-resume{
+    max-width: 112rem;
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: -50px;
+
+}

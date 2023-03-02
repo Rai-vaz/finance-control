@@ -1,0 +1,28 @@
+.container-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 2rem .5rem;
+    width: 30%;
+    font-size: 2rem;
+}
+
+.container-item p{
+    font-weight: bolder;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.description svg{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    fill: var(--green-color);
+}
