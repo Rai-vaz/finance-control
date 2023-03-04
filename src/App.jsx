@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import './css/App.css'
 import Header from './components/Header'
 import Resume from './components/Resume'
@@ -6,16 +7,34 @@ import Form from './components/Form'
 import {FaRegArrowAltCircleUp, FaRegArrowAltCircleDown, FaDollarSign} from 'react-icons/fa'
 
 function App() {
+  
+  const [data, setData] = useState({})
 
   return (
     <div className="App">
       <Header/>
       <Resume>
-        <ResumeItem title='Entrada' value={5902} icon={<FaRegArrowAltCircleDown/>}/>
-        <ResumeItem title='Saída' value={2500} icon={<FaRegArrowAltCircleUp/>}/>
+        <ResumeItem title='Entrada' value={data.flow === 'inflow' ? data.value : ''} icon={<FaRegArrowAltCircleDown/>}/>
+        <ResumeItem title='Saída' value={data.flow === 'outflow' ? data.value : ''} icon={<FaRegArrowAltCircleUp/>}/>
         <ResumeItem title='Saldo' value={1000} icon={<FaDollarSign/>}/>
       </Resume>
-      <Form/>
+      <Form sendData={setData}/>
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>xxx</td>
+            <td>xxxx</td>
+            <td>xxxxx</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   )
 }
