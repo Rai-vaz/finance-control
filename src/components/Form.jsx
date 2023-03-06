@@ -2,17 +2,18 @@ import {useState} from 'react'
 import '../css/Form.css';
 
 function Form({sendData}) {
+  const radios = document.getElementsByClassName('input-radio')
 
   const [valuesForm, setValuesForm] = useState(
     {
       description: '',
       value: '',
-      flow: ''
+      flow: '',
     }
   )
 
 
-  function createObject(event, key) {
+  function createObject(event, key) {  
     setValuesForm({...valuesForm, [key]: event.target.value})
     
   }
@@ -21,6 +22,9 @@ function Form({sendData}) {
     e.preventDefault()
     sendData(valuesForm)
     setValuesForm({})
+    for (let index = 0; index < radios.length; index++) {
+      radios[index].checked = false
+    }
   }
 
   return (
@@ -48,18 +52,22 @@ function Form({sendData}) {
         </div>
         <div className='container-radio'>
           <input 
+            className='input-radio'
             type='radio' 
             id='inflow' 
             name='flow' 
-            value='inflow'
+            value='Entrada'
+            required
             onChange={(e) => createObject(e, 'flow')}
           />
           <label htmlFor="inflow">Entrada</label>
           <input 
+            className='input-radio'
             type='radio' 
             id='outflow' 
             name='flow' 
-            value='outflow'
+            value='Saída'
+            required
             onChange={(e) => createObject(e, 'flow')}
           />
           <label htmlFor='outflow'>Saída</label>

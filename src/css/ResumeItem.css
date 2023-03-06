@@ -21,6 +21,15 @@
     
 }
 
+.red-balance{
+    border-bottom: 4px solid red;
+}
+
+.green-balance{
+    border-bottom: 4px solid green;
+}
+
+
 .description svg{
     font-weight: bolder;
     font-size: 2.5rem;

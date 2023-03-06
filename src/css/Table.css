@@ -1,0 +1,52 @@
+table{
+    max-width: 112rem;
+    width: 98%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+}
+
+thead{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+thead th:last-child{
+    text-align: center;
+}
+
+tbody{
+    padding-top: 2rem;
+}
+
+tbody td:last-child{
+    text-align: center;
+}
+
+
+svg{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+}
+
+.svg-entrada{
+    fill: green;
+}
+
+.svg-saída{
+    fill: rgb(209, 1, 1);
+    margin-left: 2.4rem;
+}
+
+.delete-icon{
+    fill: rgb(160, 1, 1);
+    cursor: pointer;
+}
+
+.delete-icon:hover{
+    fill: rgb(231, 2, 2);
+}
