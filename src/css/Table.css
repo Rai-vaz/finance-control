@@ -28,6 +28,10 @@ tbody td:last-child{
     text-align: center;
 }
 
+tbody td:first-child{
+    text-transform: capitalize;
+}
+
 
 svg{
     margin-left: 1rem;

@@ -4,11 +4,9 @@ import '../css/Table.css'
 
 
 
-const Table = ({listItem}) => {
+const Table = ({listItem, setTotal, total}) => {
 
     const [dataList, setDataList] = useState([])
-    console.log(dataList.length)
-
    
     useEffect(() => {
         setDataList([...dataList, listItem])
@@ -23,9 +21,14 @@ const Table = ({listItem}) => {
     }
 
     function deleteItem(array, item){
-      const indexItem = array.indexOf(item)
-      console.log('indice apagado' + indexItem)
-      setDataList(() => array.splice(indexItem, 1))
+     
+      const newArray =  array.filter(function(obj) {
+        return obj.description !== item.description
+      }) 
+
+      setTotal(item.flow === 'Entrada' ? {...total, enterTotal: total.enterTotal - Number(item.value), balance: total.balance - Number(item.value)} : {...total, outTotal: total.outTotal - Number(item.value), balance: total.balance + Number(item.value)} )
+
+      setDataList(newArray)
     }
 
    

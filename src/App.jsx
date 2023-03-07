@@ -40,7 +40,7 @@ function App() {
         <ResumeItem dClass={total.balance <= 0 ? 'red-balance' : 'green-balance'} title='Saldo' value={ total.balance} icon={<FaDollarSign/>}/>
       </Resume>
       <Form sendData={setData}/>
-      <Table listItem={data}/>
+      <Table listItem={data} setTotal={setTotal} total={total}/>
     </div>
   )
 }
