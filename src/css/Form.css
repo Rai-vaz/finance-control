@@ -62,9 +62,29 @@ form{
 }
 
 
-@media (max-width: 750px){
-   .container-form{
-        display: grid;
-        
-   }
+@media screen and (max-width: 750px){
+    .container-form form{
+        flex-direction: column;        
+    }
+
+    .box-inputs, .container-radio{
+        width: 100%;
+    }
+
+    .container-radio{
+        margin-bottom: 1.5rem;
+    }
+
+    .container-button{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media  screen and (max-width: 400px) {
+    .container-button input{
+        width: 100%;
+    }
 }

@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "hyoretsu.code-spell-checker-language-pack",
-        "streetsidesoftware.code-spell-checker-portuguese-brazilian"
+        "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+        "zignd.html-css-class-completion"
     ]
 }

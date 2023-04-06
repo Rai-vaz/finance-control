@@ -1,7 +1,7 @@
 import '../css/Resume.css'
 const Resume = ({children}) => {
   return (
-    <div className='container-resume'>
+    <div className='container-resume sm'>
        {children}
     </div>
   )
