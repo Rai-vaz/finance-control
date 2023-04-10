@@ -13,5 +13,10 @@
     .sm{
         flex-direction: column;
     }
+
+    .container-resume{
+       
+        margin-right: 0;
+    }
 }
 
